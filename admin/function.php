@@ -5,7 +5,7 @@ function upload_image()
 	if (isset($_FILES["image"])) {
 		$extension = explode('.', $_FILES['image']['name']);
 		$new_name = rand() . '.' . $extension[1];
-		$destination = './upload/' . $new_name;
+		$destination = '../images/' . $new_name;
 		move_uploaded_file($_FILES['image']['tmp_name'], $destination);
 		return $new_name;
 	}
