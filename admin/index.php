@@ -98,13 +98,13 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Ajouter des produits</h4>
+                                    <h4 class="modal-title">Ajouter un produit</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <label>Titre de l'image</label>
+                                    <label>Nom du produit</label>
                                     <input type="text" name="name" id="name" class="form-control" />
                                     <br />
-                                    <label>Detail</label>
+                                    <label>Prix</label>
                                     <input type="number" name="price" id="price" class="form-control" />
                                     <br />
                                     <label>Choisir une image</label>
