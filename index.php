@@ -65,6 +65,12 @@ if (isset($_GET["action"])) {
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <style>
+    .pub {
+        width: 130px;
+        height: 152px
+    }
+    </style>
 
 </head>
 
@@ -172,9 +178,10 @@ if (isset($_GET["action"])) {
 
                         <div class="col-md-3">
                             <form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>">
-                                <div class="pub"  style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;"
+                                <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;"
                                     align="center">
-                                    <img src="images/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
+                                    <img class="pub" src="images/<?php echo $row["image"]; ?>"
+                                        class="img-responsive" /><br />
 
                                     <h4 class="text-info"><?php echo $row["name"]; ?></h4>
 
