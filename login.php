@@ -8,9 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="img/undraw_rocket.svg" type="image/x-icon">
 
-    <title>login</title>
+    <title>SB Admin 2 - Login</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -48,19 +47,20 @@
                                         <h1 class="h4 text-gray-900 mb-4">My shop</h1>
                                     </div>
                                     <span id="error"></span>
-                                    <form Class="user" action="verif.php" method="POST" autocomplete="off">
+                                    <form class="user" action="verif.php" autocomplete="off">
                                         <div class="form-group">
                                             <input style="text-align:center" type="text" name="username" id="user_email"
                                                 class="form-control form-control-user" required
-                                                data-parsley-type="email" placeholder="Nom d'utilisateur" />
-
+                                                data-parsley-type="email" placeholder="Adresse mail"
+                                                data-parsley-trigger="keyup" />
+                                            <span id="error_teacher_emailid" class="text-danger"></span>
 
                                         </div>
                                         <div class="form-group">
                                             <input style="text-align:center" type="password" name="password"
                                                 id="user_password" class="form-control form-control-user" required
-                                                placeholder="Mot de passe" />
-
+                                                placeholder="Mot de passe" data-parsley-trigger="keyup" />
+                                            <span id="error_teacher_password" class="text-danger"></span>
 
                                         </div>
                                         <div class="form-group">
@@ -70,8 +70,8 @@
                                                     moi</label>
                                             </div>
                                         </div>
-                                        <input class="btn btn-primary btn-user btn-block" type="submit"
-                                            value="Se connecter">
+                                        <input class="btn btn-primary btn-user btn-block" type="submit" name="login"
+                                            id="login_button" value="Se connecter">
 
                                         <hr>
 
