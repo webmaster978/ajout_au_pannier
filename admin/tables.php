@@ -1,3 +1,11 @@
+<?php require('config/data.php'); ?>
+<?php
+if (empty($_SESSION['user'])) {
+    header('location:index.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

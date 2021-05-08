@@ -26,15 +26,15 @@
                                     <h3 class="text-center font-weight-light my-4">Admin-Login</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form method="post" action="" autocomplete="off">
+                                    <form method="post" action="verification.php" autocomplete="off">
                                         <div class="form-group">
                                             <label class="small mb-1" for="inputEmailAddress">Nom d'utilisateur</label>
-                                            <input class="form-control py-4" id="inputEmailAddress" type="text"
+                                            <input class="form-control py-4" name="username" type="text"
                                                 placeholder="Username" />
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="inputPassword">Mot de passe</label>
-                                            <input class="form-control py-4" id="inputPassword" type="password"
+                                            <input class="form-control py-4" name="password" type="password"
                                                 placeholder="Mot de passe" />
                                         </div>
                                         <div class="form-group">
