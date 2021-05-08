@@ -1,5 +1,12 @@
+<?php require('config/database.php'); ?>
 <?php
-session_start();
+if (empty($_SESSION['user'])) {
+    header('location:login');
+}
+
+?>
+<?php
+// session_start();
 $connect = mysqli_connect("localhost", "root", "", "shop");
 
 if (isset($_POST["add_to_cart"])) {

@@ -52,7 +52,7 @@ if (empty($_SESSION['user'])) {
                     <a class="dropdown-item" href="#">Paramettre</a>
 
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Deconnexion</a>
+                    <a class="dropdown-item" href="logout.php">Deconnexion</a>
                 </div>
             </li>
         </ul>
