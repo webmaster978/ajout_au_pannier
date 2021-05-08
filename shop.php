@@ -51,6 +51,7 @@ if (isset($_GET["action"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="img/undraw_rocket.svg" type="image/x-icon">
 
     <title>Ajouter au pannier</title>
 
