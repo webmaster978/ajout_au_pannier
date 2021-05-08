@@ -7,7 +7,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 
 
-    $requete = $db->prepare('SELECT * FROM login where  username=:username and password=:password');
+    $requete = $db->prepare('SELECT * FROM admin where  username=:username and password=:password');
     $requete->execute(array(
         'username' => $username,
         'password' => $password
@@ -17,9 +17,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     if ($res) {
         $user->con($res[0]->id);
-        header('location: shop');
+        header('location: tables.php');
     } else {
-        header('location: login');
+        header('location: index.php');
     }
 }
 
