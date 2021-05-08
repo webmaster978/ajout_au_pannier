@@ -1,4 +1,4 @@
-<?php require('config/database.php'); ?>
+<?php require('config/data.php'); ?>
 <?php
 if (isset($_POST['username']) && isset($_POST['password'])) {
 
