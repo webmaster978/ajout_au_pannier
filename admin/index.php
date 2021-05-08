@@ -1,272 +1,86 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Nos produits</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="icon" href="../images/savoir.jpg" type="image/jpg" />
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <!-- Material Kit CSS -->
-    <link href="css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
-
-    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
-
-    <!-- CSS Files -->
-
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="demo/demo.css" rel="stylesheet" />
-
-
-    <link rel="stylesheet" href="./assets/vendor/animate-css/vivify.min.css">
-
-    <link rel="stylesheet" href="./assets/vendor/jquery-datatable/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet"
-        href="./assets/vendor/jquery-datatable/fixedeader/dataTables.fixedcolumns.bootstrap4.min.css">
-    <link rel="stylesheet" href="./assets/vendor/jquery-datatable/fixedeader/dataTables.fixedheader.bootstrap4.min.css">
-
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="../html/assets/css/site.min.css">
-
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Page Title - SB Admin</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous">
+    </script>
 </head>
 
-<body>
-    <div class="wrapper ">
-        <div class="sidebar" data-color="purple" data-background-color="white">
-
-            <div class="logo">
-                <img width="200px;" src="../images/savoir.JPG" class="img-responsive img-circle">
-            </div>
-            <?php include '../partials/_menu.php' ?>
-        </div>
-        <div class="main-panel">
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-                <div class="container-fluid">
-                    <div class="navbar-wrapper">
-                        <a class="navbar-brand" href="javascript:;">Dashboard</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end">
-
-
-                    </div>
-                </div>
-            </nav>
-            <!-- End Navbar -->
-            <div class="content">
-                <div class="container-fluid">
-
-
-                    <div class="table-responsive">
-                        <h1 class="h2">Nos produits</h1>
-                        <div align="right">
-                            <button type="button" id="add_button" data-toggle="modal" data-target="#userModal"
-                                class="btn btn-info btn-lg">Nouveau <i class="fa fa-plus"></i> </button>
-                        </div>
-                        <br>
-                        <table id="user_data" class="table table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                    <th width="10%">Image</th>
-                                    <th width="35%">Titre</th>
-                                    <th width="35%">Detail</th>
-                                    <th width="10%">Modifier</th>
-                                    <th width="10%">Supprimer</th>
-                                </tr>
-                            </thead>
-                        </table>
-
-                    </div>
-                </div>
-
-                <div id="userModal" class="modal fade">
-                    <div class="modal-dialog">
-                        <form method="post" id="user_form" enctype="multipart/form-data">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Ajouter un produit</h4>
+<body class="bg-primary">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header">
+                                    <h3 class="text-center font-weight-light my-4">Login</h3>
                                 </div>
-                                <div class="modal-body">
-                                    <label>Nom du produit</label>
-                                    <input type="text" name="name" id="name" class="form-control" />
-                                    <br />
-                                    <label>Prix</label>
-                                    <input type="number" name="price" id="price" class="form-control" />
-                                    <br />
-                                    <label>Choisir une image</label>
-                                    <input type="file" name="image" id="image" />
-                                    <span id="user_uploaded_image"></span>
+                                <div class="card-body">
+                                    <form method="post" action="" autocomplete="off">
+                                        <div class="form-group">
+                                            <label class="small mb-1" for="inputEmailAddress">Nom d'utilisateur</label>
+                                            <input class="form-control py-4" id="inputEmailAddress" type="text"
+                                                placeholder="Username" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="small mb-1" for="inputPassword">Mot de passe</label>
+                                            <input class="form-control py-4" id="inputPassword" type="password"
+                                                placeholder="Mot de passe" />
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" id="rememberPasswordCheck"
+                                                    type="checkbox" />
+                                                <label class="custom-control-label" for="rememberPasswordCheck">Se
+                                                    souvenir de moi</label>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+
+                                            <input class="btn btn-primary" type="submit" value="Se connecter">
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="modal-footer">
-                                    <input type="hidden" name="id" id="id" />
-                                    <input type="hidden" name="operation" id="operation" />
-                                    <input type="submit" name="action" id="action" class="btn btn-success"
-                                        value="Ajouter" />
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                                <div class="card-footer text-center">
+                                    <div class="small">
+                                        <p>Boulangerie</p>
+                                    </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
-
-
-
-                <!-- Javascript -->
-                <script src="./html/assets/bundles/libscripts.bundle.js"></script>
-                <script src="./html/assets/bundles/vendorscripts.bundle.js"></script>
-
-                <script src="./html/assets/bundles/datatablescripts.bundle.js"></script>
-                <script src="./assets/vendor/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
-                <script src="./assets/vendor/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
-                <script src="./assets/vendor/jquery-datatable/buttons/buttons.colVis.min.js"></script>
-                <script src="./assets/vendor/jquery-datatable/buttons/buttons.html5.min.js"></script>
-                <script src="./assets/vendor/jquery-datatable/buttons/buttons.print.min.js"></script>
-                <script src="./assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
-                <script src="./html/assets/bundles/mainscripts.bundle.js"></script>
-                <script src="./html/assets/js/pages/tables/jquery-datatable.js"></script>
-
-                <script type="text/javascript" language="javascript">
-                $(document).ready(function() {
-                    $('#add_button').click(function() {
-                        $('#user_form')[0].reset();
-                        $('.modal-title').text("Ajouter produit");
-                        $('#action').val("Add");
-                        $('#operation').val("Add");
-                        $('#user_uploaded_image').html('');
-                    });
-
-                    var dataTable = $('#user_data').DataTable({
-                        "processing": true,
-                        "serverSide": true,
-                        "order": [],
-                        "ajax": {
-                            url: "fetch.php",
-                            type: "POST"
-                        },
-                        "columnDefs": [{
-                            "targets": [0, 3, 4],
-                            "orderable": false,
-                        }, ],
-
-                    });
-
-                    $(document).on('submit', '#user_form', function(event) {
-                        event.preventDefault();
-                        var firstName = $('#name').val();
-                        var lastName = $('#price').val();
-                        var extension = $('#image').val().split('.').pop().toLowerCase();
-                        if (extension != '') {
-                            if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
-                                alert("Format invalide");
-                                $('#image').val('');
-                                return false;
-                            }
-                        }
-                        if (firstName != '' && lastName != '') {
-                            $.ajax({
-                                url: "insert.php",
-                                method: 'POST',
-                                data: new FormData(this),
-                                contentType: false,
-                                processData: false,
-                                success: function(data) {
-                                    alert(data);
-                                    $('#user_form')[0].reset();
-                                    $('#userModal').modal('hide');
-                                    dataTable.ajax.reload();
-                                }
-                            });
-                        } else {
-                            alert("Tout les champ sont demander !!!");
-                        }
-                    });
-
-                    $(document).on('click', '.update', function() {
-                        var user_id = $(this).attr("id");
-                        $.ajax({
-                            url: "fetch_single.php",
-                            method: "POST",
-                            data: {
-                                id: id
-                            },
-                            dataType: "json",
-                            success: function(data) {
-                                $('#userModal').modal('show');
-                                $('#name').val(data.name);
-                                $('#price').val(data.price);
-                                $('.modal-title').text("Modifier le produit");
-                                $('#user_id').val(user_id);
-                                $('#user_uploaded_image').html(data.image);
-                                $('#action').val("Edit");
-                                $('#operation').val("Edit");
-                            }
-                        })
-                    });
-
-                    $(document).on('click', '.delete', function() {
-                        var user_id = $(this).attr("id");
-                        if (confirm("Etes vous sur de vouloir supprimer cela ?")) {
-                            $.ajax({
-                                url: "delete.php",
-                                method: "POST",
-                                data: {
-                                    user_id: user_id
-                                },
-                                success: function(data) {
-                                    alert(data);
-                                    dataTable.ajax.reload();
-                                }
-                            });
-                        } else {
-                            return false;
-                        }
-                    });
-
-
-                });
-                </script>
-
-
-
-
-
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <nav class="float-left">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        Creative Tim
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="copyright float-right">
-                            &copy;
-                            <script>
-                            document.write(new Date().getFullYear())
-                            </script>, made with <i class="material-icons">favorite</i> by
-                            <a>Creative Tim</a>
-                        </div>
-                        <!-- your footer here -->
-                    </div>
-                </footer>
-            </div>
+            </main>
         </div>
+        <div id="layoutAuthentication_footer">
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+    </script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
