@@ -9,6 +9,7 @@
     <meta name="author" content="" />
     <title>Tables - SB Admin</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../img/undraw_rocket.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="./assets/vendor/jquery-datatable/dataTables.bootstrap4.min.css">
     <link rel="stylesheet"
