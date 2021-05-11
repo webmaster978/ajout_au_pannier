@@ -95,7 +95,7 @@ if (isset($_GET["action"])) {
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-calendar fa-2x text-gray-300"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">Boulangerie <sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -103,7 +103,7 @@ if (isset($_GET["action"])) {
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
