@@ -15,7 +15,7 @@ if (empty($_SESSION['user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Tables - SB Admin</title>
+    <title>Partie admin</title>
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="shortcut icon" href="../img/undraw_rocket.svg" type="image/x-icon">
 
@@ -30,7 +30,7 @@ if (empty($_SESSION['user'])) {
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">Boulangerie</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i
                 class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -63,7 +63,7 @@ if (empty($_SESSION['user'])) {
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="acceuil">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
@@ -71,14 +71,14 @@ if (empty($_SESSION['user'])) {
 
 
 
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="produits">
                             <div class="sb-nav-link-icon"><i class="fas fa-plus"></i></div>
                             Produit
                         </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
+                    <div class="small">Connecter en tant que:</div>
                     Start Bootstrap
                 </div>
             </nav>
