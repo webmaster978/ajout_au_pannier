@@ -2,3 +2,6 @@ RewriteEngine on
 RewriteRule ^login$ login1.php
 RewriteRule ^shop$ shop.php
 RewriteRule ^boulangerie$ index.php
+RewriteRule ^contact$ contact.php
+RewriteRule ^about$ about.php
+RewriteRule ^produit$ product.php
