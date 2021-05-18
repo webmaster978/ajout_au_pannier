@@ -120,7 +120,7 @@ $pub = $db->query('SELECT * FROM tbl_product ORDER BY id desc');
                 </div>
                 <div class="col-md-6">
                     <div class="right-image">
-                        <img src="assets/images/feature-image.jpg" alt="">
+                        <img src="assets/images/n.jpeg" alt="">
                     </div>
                 </div>
             </div>
