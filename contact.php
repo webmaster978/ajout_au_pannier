@@ -23,12 +23,12 @@
     <?php include 'partials/_menu.php'; ?>
 
     <!-- Page Content -->
-    <div class="page-heading contact-heading header-text">
+    <div class="page-heading contact-heading header-text" style="background-image: url(assets/images/b1.jpeg);">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-content">
-                        <h4>contact us</h4>
+                        <h4>contact nous</h4>
                         <h2>let’s get in touch</h2>
                     </div>
                 </div>
