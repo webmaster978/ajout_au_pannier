@@ -16,13 +16,13 @@
                            </a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#">Nos Produits</a>
+                           <a class="nav-link" href="produit">Nos Produits</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#">A propos</a>
+                           <a class="nav-link" href="about">A propos</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#">Contact </a>
+                           <a class="nav-link" href="contact">Contact </a>
                        </li>
                    </ul>
                </div>
