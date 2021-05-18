@@ -60,8 +60,8 @@ $pub = $db->query('SELECT * FROM tbl_product ORDER BY id desc');
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Latest Products</h2>
-                        <a href="products.html">view all products <i class="fa fa-angle-right"></i></a>
+                        <h2>Nos produits</h2>
+                        <a href="products.html">voir tout nos produits <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
                 <?php while ($g = $pub->fetch()) { ?>
@@ -73,7 +73,7 @@ $pub = $db->query('SELECT * FROM tbl_product ORDER BY id desc');
                                 <h4><?= $g['name']; ?></h4>
                             </a>
                             <h6>$<?= $g['price']; ?></h6>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                            <p>Bon gateau pour vos manifestation.</p>
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
                                 <li><i class="fa fa-star"></i></li>
@@ -81,7 +81,10 @@ $pub = $db->query('SELECT * FROM tbl_product ORDER BY id desc');
                                 <li><i class="fa fa-star"></i></li>
                                 <li><i class="fa fa-star"></i></li>
                             </ul>
-                            <span><button class="" type="submit">Ajouter au panier</button></span>
+                            <span> <a class="btn btn-success" href="login"><i class="fa fa-shopping-cart"></i> Ajouter
+                                    au
+                                    pannier</a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -101,10 +104,10 @@ $pub = $db->query('SELECT * FROM tbl_product ORDER BY id desc');
                 <div class="col-md-6">
                     <div class="left-content">
                         <h4>Looking for the best products?</h4>
-                        <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This
+                        <p><a rel="nofollow" href="#">This
                                 template</a> is free to use for your business websites. However, you have no permission
                             to redistribute the downloadable ZIP file on any template collection website. <a
-                                rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
+                                rel="nofollow" href="#">Contact us</a> for more info.</p>
                         <ul class="featured-list">
                             <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                             <li><a href="#">Consectetur an adipisicing elit</a></li>
@@ -112,7 +115,7 @@ $pub = $db->query('SELECT * FROM tbl_product ORDER BY id desc');
                             <li><a href="#">Corporis, omnis doloremque</a></li>
                             <li><a href="#">Non cum id reprehenderit</a></li>
                         </ul>
-                        <a href="about.html" class="filled-button">Read More</a>
+                        <a href="#" class="filled-button">Read More</a>
                     </div>
                 </div>
                 <div class="col-md-6">
