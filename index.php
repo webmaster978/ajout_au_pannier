@@ -1,8 +1,16 @@
+<?php include 'config/database.php';
+$pub = $db->query('SELECT * FROM tbl_product ORDER BY id desc');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php include 'partials/_head.php'; ?>
+    <style>
+    .p {
+        height: 250px;
+    }
+    </style>
 
 </head>
 
@@ -52,19 +60,20 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Latest Products</h2>
-                        <a href="products.html">view all products <i class="fa fa-angle-right"></i></a>
+                        <h2>Nos produits</h2>
+                        <a href="products.html">voir tout nos produits <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
+                <?php while ($g = $pub->fetch()) { ?>
                 <div class="col-md-4">
                     <div class="product-item">
-                        <a href="#"><img src="assets/images/product_01.jpg" alt=""></a>
+                        <a href="#"><img class="p" src="images/<?= $g['image']; ?>" alt=""></a>
                         <div class="down-content">
                             <a href="#">
-                                <h4>Tittle goes here</h4>
+                                <h4><?= $g['name']; ?></h4>
                             </a>
-                            <h6>$25.75</h6>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                            <h6>$<?= $g['price']; ?></h6>
+                            <p>Bon gateau pour vos manifestation.</p>
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
                                 <li><i class="fa fa-star"></i></li>
@@ -72,110 +81,14 @@
                                 <li><i class="fa fa-star"></i></li>
                                 <li><i class="fa fa-star"></i></li>
                             </ul>
-                            <span>Reviews (24)</span>
+                            <span> <a class="btn btn-success" href="login"><i class="fa fa-shopping-cart"></i> Ajouter
+                                    au
+                                    pannier</a>
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="assets/images/product_02.jpg" alt=""></a>
-                        <div class="down-content">
-                            <a href="#">
-                                <h4>Tittle goes here</h4>
-                            </a>
-                            <h6>$30.25</h6>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>Reviews (21)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="assets/images/product_03.jpg" alt=""></a>
-                        <div class="down-content">
-                            <a href="#">
-                                <h4>Tittle goes here</h4>
-                            </a>
-                            <h6>$20.45</h6>
-                            <p>Sixteen Clothing is free CSS template provided by TemplateMo.</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>Reviews (36)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="assets/images/product_04.jpg" alt=""></a>
-                        <div class="down-content">
-                            <a href="#">
-                                <h4>Tittle goes here</h4>
-                            </a>
-                            <h6>$15.25</h6>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>Reviews (48)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="assets/images/product_05.jpg" alt=""></a>
-                        <div class="down-content">
-                            <a href="#">
-                                <h4>Tittle goes here</h4>
-                            </a>
-                            <h6>$12.50</h6>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>Reviews (16)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="assets/images/product_06.jpg" alt=""></a>
-                        <div class="down-content">
-                            <a href="#">
-                                <h4>Tittle goes here</h4>
-                            </a>
-                            <h6>$22.50</h6>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>Reviews (32)</span>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -191,10 +104,10 @@
                 <div class="col-md-6">
                     <div class="left-content">
                         <h4>Looking for the best products?</h4>
-                        <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This
+                        <p><a rel="nofollow" href="#">This
                                 template</a> is free to use for your business websites. However, you have no permission
                             to redistribute the downloadable ZIP file on any template collection website. <a
-                                rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
+                                rel="nofollow" href="#">Contact us</a> for more info.</p>
                         <ul class="featured-list">
                             <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                             <li><a href="#">Consectetur an adipisicing elit</a></li>
@@ -202,7 +115,7 @@
                             <li><a href="#">Corporis, omnis doloremque</a></li>
                             <li><a href="#">Non cum id reprehenderit</a></li>
                         </ul>
-                        <a href="about.html" class="filled-button">Read More</a>
+                        <a href="#" class="filled-button">Read More</a>
                     </div>
                 </div>
                 <div class="col-md-6">
