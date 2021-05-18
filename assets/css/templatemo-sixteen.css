@@ -346,11 +346,11 @@ header .navbar {
 
 /* .banner-item-01 {
     padding: 300px 0px;
-    background-image: url(../images/slide_01.jpg);
+    background-image: url(../images/b1.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-} */
+}
 
 .banner-item-02 {
     padding: 300px 0px;
@@ -366,7 +366,7 @@ header .navbar {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-}
+} */
 
 .banner .banner-item {
     max-height: 600px;
