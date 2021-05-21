@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="img/undraw_rocket.svg" type="image/x-icon">
 
-    <title>login</title>
+    <title>inscription</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -39,34 +39,33 @@
 
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-
                             <?php
                             if (isset($_GET['err']) and !empty($_GET['err'])) {
 
                                 if (isset($_GET['errs']) and !empty($_GET['errs'])) {
                                     if (sha1($_GET['err']) == $_GET['errs']) {
-
-
-
-
+                            ?>
+                            <script type="text/javascript">
+                            alert("ce nom d'utilisateur existe deja");
+                            </script>
+                            <?php
+                                    }
+                                }
+                            }
 
 
 
                             ?>
+                            <?php
+                            if (isset($_GET['succ']) and !empty($_GET['succ'])) {
 
+                                if (isset($_GET['succs']) and !empty($_GET['succs'])) {
+                                    if (sha1($_GET['succ']) == $_GET['succs']) {
 
-
-
-
+                            ?>
                             <script type="text/javascript">
-                            alert("username ou mot de passe incorect");
+                            alert("Compte creer avec success");
                             </script>
-
-
-
-
-
-
 
                             <?php
                                     }
@@ -76,6 +75,9 @@
 
 
                             ?>
+
+
+
                             <div class="col-lg-6 d-none d-lg-block ">
                                 <a href="boulangerie"><i class="fa fa-arrow-alt-circle-left" style="font-size: 28px;">
                                     </i></a>
@@ -87,10 +89,10 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">My shop</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">inscription</h1>
                                     </div>
                                     <span id="error"></span>
-                                    <form Class="user" action="verif.php" method="POST" autocomplete="off">
+                                    <form Class="user" action="inscrit.php" method="POST" autocomplete="off">
                                         <div class="form-group">
                                             <input style="text-align:center" type="text" name="username" id="user_email"
                                                 class="form-control form-control-user" required
@@ -99,21 +101,18 @@
 
                                         </div>
                                         <div class="form-group">
+                                            <input style="text-align:center" type="mail" name="mail" id="user_password"
+                                                class="form-control form-control-user" required
+                                                placeholder="Adresse mail" />
+                                        </div>
+                                        <div class="form-group">
                                             <input style="text-align:center" type="password" name="password"
                                                 id="user_password" class="form-control form-control-user" required
                                                 placeholder="Mot de passe" />
-
-
                                         </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Se souvenir de
-                                                    moi</label>
-                                            </div>
-                                        </div>
-                                        <input class="btn btn-primary btn-user btn-block" type="submit"
-                                            value="Se connecter">
+
+                                        <input class="btn btn-primary btn-user btn-block" name="submit" type="submit"
+                                            value="S'inscrire">
 
 
 
@@ -121,7 +120,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        N'avez-vous pas de compte?<a class="" href="inscription">Creer ici</a>
+                                        Avez-vous un compte?<a class="" href="login">Connexion</a>
                                     </div>
 
                                 </div>
