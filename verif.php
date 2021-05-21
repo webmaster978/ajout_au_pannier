@@ -17,9 +17,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     if ($res) {
         $user->con($res[0]->id);
-        header('location: shop');
+        header('location: user/acceuil');
     } else {
-        header('location: login');
+        header('location:login?err=' . $err . '&errs=' . $errs);
     }
 }
 

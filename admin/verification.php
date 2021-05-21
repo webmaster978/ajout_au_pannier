@@ -17,7 +17,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     if ($res) {
         $user->con($res[0]->id);
-        header('location: tables.php');
+        header('location: acceuil');
     } else {
         header('location: index.php');
     }
