@@ -5,3 +5,4 @@ RewriteRule ^boulangerie$ index.php
 RewriteRule ^contact$ contact.php
 RewriteRule ^about$ about.php
 RewriteRule ^produit$ product.php
+RewriteRule ^inscription$ register.php
